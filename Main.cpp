@@ -15,6 +15,7 @@ int main () {
     "2. Worldle\n"<<
     "3. Grid\n";
     "4. Ver victorias\n";
+    
     std::string respuesta;
     std::cin>>respuesta;
     NuevaPantalla();
