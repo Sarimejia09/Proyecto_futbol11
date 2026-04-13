@@ -2,7 +2,60 @@
 #include <fstream>
 #include <sstream>
 #include <ctime>
+#include <map>
 #include "Funciones.h"
+
+void GuardarVictoria(std::string juego) {
+    std::ifstream archivoIn("estadisticas.txt");
+    std::map<std::string, int> stats;
+    std::string linea;
+
+    // Leer datos existentes
+    while (getline(archivoIn, linea)) {
+        std::stringstream ss(linea);
+        std::string nombre;
+        int valor;
+
+        getline(ss, nombre, '=');
+        ss >> valor;
+
+        stats[nombre] = valor;
+    }
+    archivoIn.close();
+
+    // Si no existe, inicializar
+    if (stats.find(juego) == stats.end()) {
+        stats[juego] = 0;
+    }
+
+    // Sumar victoria
+    stats[juego]++;
+
+    // Guardar de nuevo
+    std::ofstream archivoOut("estadisticas.txt");
+
+    for (auto &par : stats) {
+        archivoOut << par.first << "=" << par.second << "\n";
+    }
+
+    archivoOut.close();
+}
+
+void MostrarVictorias() {
+    std::ifstream archivo("estadisticas.txt");
+    std::string linea;
+
+    LineaHorizontal();
+    Centrar(9);
+    std::cout<<"VICTORIAS";
+    LineaHorizontal();
+
+    while (getline(archivo, linea)) {
+        std::cout << linea << "\n";
+    }
+
+    archivo.close();
+}
 
 void ImprimirTabla(std::string tabla[12][16]) {
     

@@ -3,7 +3,6 @@
 #include "Juegos.h"
 #include "Funciones.h"
 
-int correcto=0;
 
 int main () {
 
@@ -15,6 +14,7 @@ int main () {
     "1. Adivina el jugador con 3 pistas \n"<<
     "2. Worldle\n"<<
     "3. Grid\n";
+    "4. Ver victorias\n";
     std::string respuesta;
     std::cin>>respuesta;
     NuevaPantalla();
@@ -25,8 +25,8 @@ int main () {
         Worldle();
     } else if(respuesta=="3") {
         JuegoGrid();
-    } else {
-        PantallaPerder();
+    } else if(respuesta=="4") {
+        MostrarVictorias();
     }
 }
 

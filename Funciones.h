@@ -31,7 +31,8 @@ int IdJugador(std::string ju, jugador jGrid[1000], std::string Grid[4][4]);
 int ClubesPaises(jugador jGrid[1000], std::string clubes[3], std::string paises[3], std::string Grid[4][4], std::string ju, int id); 
 void ObtenerDatosGrid(jugador jGrid[1000]);
 bool Ganar(std::string Grid[4][4]);
-
+void GuardarVictoria(std::string juego);
+void MostrarVictorias();
 
 //printables
 void LineaHorizontal();

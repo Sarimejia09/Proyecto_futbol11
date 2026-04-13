@@ -53,6 +53,7 @@ void AdivinaElJugador() {
         transform(intento.begin(), intento.end(), intento.begin(), ::tolower);
 
         if (intento==jugadores[n].nombreCompleto || intento==jugadores[n].nombre || intento==jugadores[n].apellido) {
+            GuardarVictoria("Adivina");
             PantallaGanar();
             std::cout<<"\n";
             Centrar(6);
@@ -155,8 +156,8 @@ void Worldle () {
             } 
         }   
         if (correcto==c) {
+            GuardarVictoria("Worldle");
             PantallaGanar();
-
             std::cout<<"\n";
             Centrar(26);
             std::cout<<"Lo lograste en: "<<ni-1<<" intentos \n";
@@ -285,6 +286,7 @@ void JuegoGrid () {
         Ganar(Grid);
         
         if (Ganar(Grid)==true) {
+            GuardarVictoria("Grid");
             PantallaGanar();
             std::cout<<"\n";
             LineaHorizontal();
