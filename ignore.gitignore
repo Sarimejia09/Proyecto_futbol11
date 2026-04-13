@@ -1,0 +1,63 @@
+# Compilados
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+# Objetos
+*.o
+*.obj
+
+# Librerías
+*.lib
+*.a
+*.la
+*.lo
+
+# Archivos temporales
+*.tmp
+*.log
+*.cache
+
+# Archivos de IDEs
+
+# VS Code
+.vscode/
+
+# Code::Blocks
+*.cbp
+*.layout
+*.depend
+
+# Dev-C++
+*.dev
+
+# CLion / JetBrains
+.idea/
+cmake-build-*/
+
+# Visual Studio
+*.sln
+*.vcxproj*
+*.pdb
+*.idb
+*.ilk
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos generados por CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Archivos de ejecución del proyecto
+juego
+
+# Archivos CSV opcionales (si no quieres subir datos)
+# jugadores.csv
+# Jugadores_Grid.csv
