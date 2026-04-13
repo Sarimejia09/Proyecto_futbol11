@@ -1,4 +1,4 @@
-# 🎮 Juegos de Fútbol en C++
+# 🎮 Juegos de Fútbol en C++ por Saraí Mejía
 
 Este proyecto es una colección de minijuegos en C++ basados en jugadores de fútbol. Incluye diferentes modos de juego donde el usuario debe adivinar jugadores utilizando pistas, letras o relaciones entre clubes y nacionalidades.
 
